@@ -1,0 +1,171 @@
+@font-face {
+   font-family: 'Monty';
+   src: url("../ttf/Montserrat.ttf");
+}
+
+@media screen and (max-width: 600px ) {
+   body { font-size: 0.8em; }
+}
+
+html { 
+   height: 100%;
+   font-family: Monty;
+   background-image: linear-gradient(45deg, #ffb3a7, #5f32ff);
+   background-attachment: fixed;
+}
+
+body { 
+   margin: 0;
+   display: flex;
+   justify-content: center;
+}
+
+header { 
+   top: 0;
+   display: flex;
+   font-weight: 600;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+   background-color: antiquewhite;
+   box-shadow: 0px 0px 4px 0px;
+}
+
+header > div {
+   padding: 1em;
+   display: flex;
+   align-items: center;
+}
+
+header > div:not(#brand) {
+   cursor: pointer;
+}
+
+input[type=text],
+input[type=number],
+input[type=password] {
+   font-family: inherit;
+   padding: 1em;
+   outline-color: transparent;
+   border: 1px solid #AAA;
+   border-radius: 0.5em;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=password]:focus {
+   outline-color: lightskyblue;
+}
+
+#login-dialog {
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 11;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+	background: #000A;
+}
+
+#btn-close {
+	font-size: 2em;
+    cursor: pointer;
+}
+
+#btn-send {
+	padding: 1em;
+    margin: 1em;
+    background: lightskyblue;
+    border-radius: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 8px -3px;
+}
+
+.navbtn {
+	transition: color 0.2s;
+}
+
+.navbtn:hover {
+	color: lightskyblue;
+}
+
+#dialog {
+	width: 60%;
+	background: white;
+}
+
+#dialog-header {
+	justify-content: space-between;
+	font-weight: 600;
+    align-items: center;
+	padding: 1em;
+    text-align: right;
+    display: flex;
+}
+
+#dialog-inputs {
+	display: flex;
+    flex-direction: column;
+    padding: 2em 5em;
+}
+
+#dialog-footer {
+	display: flex;
+    justify-content: center;
+}
+
+#dialog-inputs input {
+	margin: 0.4em 0;
+}
+
+#brand {
+   flex:1;
+   font-size: 1.5em;
+}
+
+#content {
+   display: flex;
+   overflow: hidden;
+   background: aliceblue;
+   flex-direction: column;
+   margin: 10em 0;
+   width: 75%;
+   min-width: 350px;
+   border-radius: 0.8em;
+   box-shadow: 0px 0px 5px -2px;
+}
+
+#inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#inputs input {
+	width: 50%;
+	margin: 1em 0;
+}
+
+.subtitle {
+   padding: 1em;
+   font-weight: 600;
+   border-bottom: 1px solid;
+   margin: 0 1em;
+}
+
+#options {
+	margin: 1em;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.opt-btn {
+	cursor: pointer;
+	padding: 1em;
+	border-radius: 1em;
+	background: lightskyblue;
+}

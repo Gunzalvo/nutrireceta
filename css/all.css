@@ -1,0 +1,328 @@
+@font-face {
+   font-family: 'Monty';
+   src: url("ttf/Montserrat.ttf");
+}
+
+@media screen and (max-width: 600px ) {
+   body { font-size: 0.8em; }
+}
+
+html { 
+   height: 100%;
+   font-family: Monty;
+   background-image: linear-gradient(45deg, #ffb3a7, #5f32ff);
+   background-attachment: fixed;
+}
+
+body { 
+   margin: 0;
+   display: flex;
+   justify-content: center;
+}
+
+header { 
+   top: 0;
+   display: flex;
+   font-weight: 600;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+   background-color: antiquewhite;
+   box-shadow: 0px 0px 4px 0px;
+}
+
+header > div {
+   padding: 1em;
+   display: flex;
+   align-items: center;
+}
+
+header > div:not(#brand) {
+   cursor: pointer;
+}
+
+input[type=text],
+input[type=number],
+input[type=password] {
+   font-family: inherit;
+   padding: 1em;
+   outline-color: transparent;
+   border: 1px solid #AAA;
+   border-radius: 0.5em;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=password]:focus {
+   outline-color: lightskyblue;
+}
+
+#login-dialog {
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 11;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+	background: #000A;
+}
+
+#btn-close {
+	font-size: 2em;
+    cursor: pointer;
+}
+
+#btn-send {
+	padding: 1em;
+    margin: 1em;
+    background: lightskyblue;
+    border-radius: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 8px -3px;
+}
+
+.navbtn {
+	transition: color 0.2s;
+}
+
+.navbtn:hover {
+	color: lightskyblue;
+}
+
+#dialog {
+	width: 60%;
+	background: white;
+}
+
+#dialog-header {
+	justify-content: space-between;
+	font-weight: 600;
+    align-items: center;
+	padding: 1em;
+    text-align: right;
+    display: flex;
+}
+
+#dialog-inputs {
+	display: flex;
+    flex-direction: column;
+    padding: 2em 5em;
+}
+
+#dialog-footer {
+	display: flex;
+    justify-content: center;
+}
+
+#dialog-inputs input {
+	margin: 0.4em 0;
+}
+
+#brand {
+   flex:1;
+   font-size: 1.5em;
+}
+
+#content {
+   display: flex;
+   overflow: hidden;
+   background: aliceblue;
+   flex-direction: column;
+   margin: 10em 0;
+   width: 75%;
+   min-width: 350px;
+   border-radius: 0.8em;
+   box-shadow: 0px 0px 5px -2px;
+}
+
+#recipe-name {
+   border: none;
+   border-radius: 0;
+   border-bottom: 1px solid black;
+   background-color: lightskyblue;
+   font-size: 1.1em;
+   font-weight: 600;
+   margin-bottom: 4em;
+}
+
+#recipe-name:focus {
+   outline-color: transparent;
+}
+
+#ingredients-list {
+   padding: 2em 1em;
+}
+
+#ingredient-add {
+   width: 100%;
+   text-align: center;
+   margin-top: 0.5em;
+}
+
+#ingredient-add .fa-plus {
+   font-size: 2em;
+   cursor: pointer;
+}
+
+#process {
+   padding: 2em 1em;
+}
+
+#dh-weight {
+   margin-left:1em;
+}
+
+#dh-weight > input {
+   padding: 0.2em;
+}
+
+#sellos {
+	display: flex;
+	justify-content: center;
+}
+
+#sellos img {
+	display: none;
+	height: 5em;
+}
+
+#alertas {
+	margin: 1em 0;
+}
+
+#alertas div {
+	margin: 0 1em;
+	color: red;
+	font-weight: bold;
+}
+
+.trow {
+   margin: 2em 1em;
+   display: flex;
+   border-bottom: 1px solid #999;
+   padding-bottom: 1em;
+}
+
+.subtitle {
+   padding: 1em;
+   font-weight: 600;
+   border-bottom: 1px solid;
+   margin: 0 1em;
+}
+
+.ingredient-done {
+   display: flex;
+   align-items: center;
+   margin: 0.5em 0;
+   padding: 1em;
+   border-bottom: 1px solid #AAA;
+}
+
+.ingredient-desc {
+   align-items: center;
+   display: flex;
+   flex: 1;
+}
+
+.ingredient-name {
+   font-size: 1.2em;
+   font-weight: bold;
+   margin: 0 0.2em;
+}
+
+.ingredient-brand {
+   color: goldenrod;
+   margin: 0 0.2em;
+}
+
+.ingredient-cat {
+   margin-left: 1em;
+}
+
+.btn-edit {
+   margin-left: 0.5em;
+   cursor: pointer;
+}
+
+.ingredient-search {
+   display: flex;
+   height: 4em;
+   align-items: baseline;
+}
+
+.ingredient-query {
+   flex: 1;
+}
+
+.ingredient-quant {
+   flex: 0.2;
+   text-align: center;
+   min-width: 2em;
+}
+
+.ingredient-query-result {
+   flex:1;
+   display: flex;
+   margin-right: 1em;
+   flex-direction: column;
+}
+
+.search-results {
+   background: white;
+   z-index: 2;
+   border: 1px solid;
+}
+
+.search-result {
+   font-size: 0.7em;
+   padding: 0.5em;
+   cursor: pointer;
+}
+
+.search-result:hover{
+   background: antiquewhite;
+}
+
+.search-result:not(:first-child) {
+   border-top: 1px solid;
+}
+
+.result-name {
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+.result-brand {
+   font-size: 1.1em;
+   color: goldenrod;
+}
+
+.result-cat {
+   margin-top: 1em;
+}
+
+.btn-delete, .btn-done {
+   padding: 0.5em;
+   cursor: pointer;
+}
+
+.nutrient-name {
+   flex: 1;
+}
+
+#options {
+	margin: 1em;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.opt-btn {
+	cursor: pointer;
+	padding: 1em;
+	border-radius: 1em;
+	background: lightskyblue;
+}

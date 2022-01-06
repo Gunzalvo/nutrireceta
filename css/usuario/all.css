@@ -1,0 +1,101 @@
+@font-face {
+   font-family: 'Monty';
+   src: url("../ttf/Montserrat.ttf");
+}
+
+@media screen and (max-width: 600px ) {
+   body { font-size: 0.8em; }
+}
+
+html { 
+   height: 100%;
+   font-family: Monty;
+   background-image: linear-gradient(45deg, #ffb3a7, #5f32ff);
+   background-attachment: fixed;
+}
+
+body { 
+   margin: 0;
+   display: flex;
+   justify-content: center;
+}
+
+header { 
+   top: 0;
+   display: flex;
+   font-weight: 600;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+   background-color: antiquewhite;
+   box-shadow: 0px 0px 4px 0px;
+}
+
+header > div {
+   padding: 1em;
+   display: flex;
+   align-items: center;
+}
+
+header > div:not(#brand) {
+   cursor: pointer;
+}
+
+input[type=text],
+input[type=number],
+input[type=password] {
+   font-family: inherit;
+   padding: 1em;
+   outline-color: transparent;
+   border: 1px solid #AAA;
+   border-radius: 0.5em;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=password]:focus {
+   outline-color: lightskyblue;
+}
+
+.navbtn {
+	transition: color 0.2s;
+}
+
+.navbtn:hover {
+	color: lightskyblue;
+}
+
+#brand {
+   flex:1;
+   font-size: 1.5em;
+}
+
+#content {
+   display: flex;
+   overflow: hidden;
+   background: aliceblue;
+   flex-direction: column;
+   margin: 10em 0;
+   width: 75%;
+   min-width: 350px;
+   border-radius: 0.8em;
+   box-shadow: 0px 0px 5px -2px;
+}
+
+.subtitle {
+   padding: 1em;
+   font-weight: 600;
+   border-bottom: 1px solid;
+   margin: 0 1em;
+}
+
+.recipe {
+	display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+    cursor: pointer;
+}
+
+.recipe:hover {
+	background-color: antiquewhite;
+}
